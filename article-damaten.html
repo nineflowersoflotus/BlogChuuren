@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damaten ou Riichi? | 九朵蓮花</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Javanese Text', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('site-background.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      display: flex;
+    }
+    a {
+      color: #2a6f2a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content Area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: calc(100% - 220px);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header.main-header {
+      text-align: center;
+      padding: 40px 0;
+      background: url('bamboo-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-family: 'i ichimaru', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      -webkit-text-stroke: 0.001px #ffffff;
+      text-stroke: 1px #000;
+    }
+    header.main-header p {
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Article Content */
+    .article-full {
+      background: #fff;
+      border-left: 5px solid #2a6f2a;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article-full h2 {
+      margin-top: 0;
+      color: #2a6f2a;
+    }
+    .article-full p {
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    .article-full table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1em;
+    }
+    .article-full th,
+    .article-full td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    .article-full th {
+      background-color: #f4f4f4;
+    }
+
+    /* Sidebar with Vertical Image */
+    .sidebar {
+      width: 200px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      overflow: hidden;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+    .sidebar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e8e8e8;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <header class="main-header">
+      <h1>Blog Chuuren</h1>
+      <p>Explorando o mundo do Riichi Mahjong</p>
+    </header>
+
+    <article class="article-full">
+      <h2>Damaten ou Riichi?</h2>
+      <p>No Riichi Mahjong, poucas decisões têm tanto peso estratégico quanto escolher entre declarar Riichi ou permanecer em Damaten. Essa escolha vai muito além de intuição ou tradição: trata-se de uma decisão matemática, onde o Valor Esperado (VE) é a bússola que guia o jogador consciente.</p>
+      <p>Declarar riichi oferece um aumento direto no valor da mão através dos han adicionais e pressiona os adversários psicologicamente e taticamente. Contudo, essa exposição vem ao custo de abrir informações valiosas sobre sua mão e forçar a revelação de tiles arriscados. Em contrapartida, manter-se em damaten preserva a discrição e pode ser vantajoso em situações onde a vitória silenciosa traz mais lucro estratégico.</p>
+      <p>Podemos considerar o win rate de damaten como sendo aproximadamente +10% do win rate de riichi, pois os jogadores não sabem que estamos em tenpai e têm maior chance de jogar a peça que precisamos. O deal-in rate é 3% menor, pois podemos flexibilizar os descartes.</p>
+      <p><strong>Vantagens do Riichi:</strong> Cada han adicional vale, em média, cerca de 2000 pontos sem o oya, e o acréscimo médio de valor esperado devido a ippatsu é de aproximadamente 15% de 2000, ou 320 pontos. Há 30–35% de chance de ganhar pelo menos 1 ura dora, acrescentando mais cerca de 2000 pontos nesses casos, resultando em um acréscimo médio de 620 pontos, totalizando aproximadamente 940 pontos. Por outro lado, ao declarar riichi, gastamos 1000 pontos, o que também deve ser considerado no cálculo do VE.</p>
+      <p><strong>Cálculo de VE para Riichi (3 han 40 fu):</strong><br>
+      VE = (8940 × 0,53) – (6000 × 0,096) = 4162 pontos</p>
+      <p><strong>Cálculo de VE para Damaten (3 han 40 fu):</strong><br>
+      VE = (5200 × 0,63) – (5000 × 0,066) = 2946 pontos<br>
+      Nesse caso, vemos que o bônus de riichi supera o valor esperado de damaten. Uma mão de 4 han 40 fu (damaten) vale 5200 pontos, enquanto essa mesma mão com riichi corresponde a mangan (8000 pontos). Somando os 940 pontos de bônus probabilístico, temos 8940 pontos vs. 5200 pontos.</p>
+      <p>Considere uma mão de 4 Han Pinfu, pontuada como 7700 pontos em Damaten. Vamos comparar:</p>
+      <ul>
+        <li><strong>Riichi:</strong> VE = (8940 × 0,53) – (6000 × 0,096) = 4162 pontos</li>
+        <li><strong>Damaten:</strong> VE = (7700 × 0,63) – (5000 × 0,066) = 4521 pontos</li>
+      </ul>
+      <p>Apesar de Riichi adicionar 1240 pontos em expectativa, essa vantagem não é suficiente para cobrir o depósito de 1000 pontos e a maior taxa de deal-in, tornando Damaten mais lucrativo neste caso.</p>
+       <h2>Aumento de Pontuação em Mãos Altas</h2>
+      <p>Em mãos que já alcançam patamares elevados de han, o arredondamento de pontuação pode gerar saltos expressivos quando adicionamos o han extra de Riichi:</p>
+      <ul>
+        <li><strong>5 Han (Mangan):</strong> Uma mão de 5 han sem Riichi é classificada como <em>Mangan</em> (8000 pontos). Declarar Riichi adiciona 1 han, totalizando 6 han e elevando a pontuação para <em>Haneman</em> (12000 pontos), um salto de 4000 pontos.</li>
+        <li><strong>7 Han (Haneman):</strong> Com 7 han, a mão já se enquadra em <em>Haneman</em> (12000 pontos). O han extra de Riichi (8 han) leva ao patamar de <em>Baiman</em> (16000 pontos), adicionando 4000 pontos.</li>
+        <li><strong>10 Han (Baiman):</strong> Uma mão de 10 han pontua como <em>Baiman</em> (16000 pontos). Ao declarar Riichi, chega-se a 11 han e atinge-se <em>Sanbaiman</em> (24000 pontos), um aumento de 8000 pontos.</li>
+      </ul>
+      <h2>Tabela de Pontuação de 1 a 5 Han</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Han</th>
+            <th>30 fu</th>
+            <th>40 fu</th>
+            <th>50 fu</th>
+            <th>60 fu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>1000</td><td>1300</td><td>1600</td><td>2000</td></tr>
+          <tr><td>2</td><td>2000</td><td>2600</td><td>3200</td><td>3900</td></tr>
+          <tr><td>3</td><td>3900</td><td>5200</td><td>6400</td><td>7700</td></tr>
+          <tr><td>4</td><td>7700</td><td>8000</td><td>8000</td><td>8000</td></tr>
+          <tr><td>5</td><td>8000</td><td>8000</td><td>8000</td><td>8000</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Impacto da Diferença de 1 Han na Pontuação</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Base</th>
+            <th>Pts Damaten</th>
+            <th>Pts Riichi</th>
+            <th>ΔPontuação</th>
+            <th>ΔPontuação + Bônus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>3 han 30 fu</td><td>3900</td><td>7700</td><td>+3800</td><td>+4740</td></tr>
+          <tr><td>4 han 30 fu</td><td>7700</td><td>8000</td><td>+300</td><td>+1240</td></tr>
+          <tr><td>2 han 40 fu</td><td>2600</td><td>5200</td><td>+2600</td><td>+3540</td></tr>
+          <tr><td>1 han 50 fu</td><td>1600</td><td>3200</td><td>+1600</td><td>+2540</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Quando Fazer Riichi ou Damaten</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Han</th>
+            <th>Fu</th>
+            <th>Pontuação Base</th>
+            <th>Riichi ou Damaten</th>
+            <th>Justificativa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>40</td><td>1300</td><td>Riichi</td><td>Ganho do han extra e ura relevante</td></tr>
+          <tr><td>1</td><td>50</td><td>1600</td><td>Riichi</td><td>Riichi aumenta VE significativamente</td></tr>
+          <tr><td>1</td><td>60</td><td>2000</td><td>Riichi</td><td>VE de damaten muito baixo sem Riichi</td></tr>
+          <tr><td>2</td><td>30</td><td>2000</td><td>Riichi</td><td>Bônus de Riichi relevante</td></tr>
+          <tr><td>2</td><td>40</td><td>2600</td><td>Riichi</td><td>Riichi eleva VE de forma sólida</td></tr>
+          <tr><td>2</td><td>50</td><td>3200</td><td>Riichi</td><td>Valor base ainda pequeno, Riichi compensa</td></tr>
+          <tr><td>2</td><td>60</td><td>3900</td><td>Riichi</td><td>VE maior com ippatsu e ura-dora</td></tr>
+          <tr><td>3</td><td>30</td><td>3900</td><td>⚠️ Contextual</td><td>Riichi se precisa de pontos; damaten ok</td></tr>
+          <tr><td>3</td><td>40</td><td>5200</td><td>⚠️ Contextual</td><td>Damaten se a espera for ruim</td></tr>
+          <tr><td>3</td><td>50</td><td>6400</td><td>⚠️ Riichi arriscado</td><td>Damaten começa a ser mais seguro</td></tr>
+          <tr><td>3</td><td>60</td><td>7700</td><td>Damaten</td><td>Já próximo de mangan, Riichi pouco relevante</td></tr>
+          <tr><td>4</td><td>30</td><td>7700</td><td>Damaten</td><td>Riichi provém pouco ganho (+300 pontos)</td></tr>
+          <tr><td>4</td><td>40</td><td>8000 (mangan)</td><td>Damaten</td><td>Mesma lógica (bônus irrelevante)</td></tr>
+          <tr><td>4</td><td>50</td><td>8000</td><td>Damaten</td><td>Mesma lógica</td></tr>
+          <tr><td>4</td><td>60</td><td>8000</td><td>Damaten</td><td>Mesma lógica</td></tr>
+        </tbody>
+      </table>
+            <h2>Conclusão</h2>
+            <p>Quando temos uma mão de por volta de 5200 pontos base ou mais em uma situação de jogo onde valorizamos o equílibrio entre velocidade e pontuação, damaten é recomendado. Em situações onde queremos apenas ganhar para rodar o jogo (ex.: o-rasu em primeiro lugar) damaten com yaku é sempre recomendado, devido ao maior win rate. Em situações onde a pontuação é absolutamente necessária, optamos por riichi. Em mãos de 5, 7 ou 10 han, riichi é vantajoso pois o aumento de 1 han resulta em um aumento de 4000+ pontos.</p>
+
+
+      <a href="index.html">&larr; Voltar ao blog</a>
+    </article>
+
+    <footer>
+      &copy; 2025 九朵蓮花. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <aside class="sidebar">
+    <img src="vertical-bamboo.png" alt="Vertical Bamboo Image">
+  </aside>
+</body>
+</html>

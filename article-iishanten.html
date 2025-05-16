@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Oshihiki em Iishanten | 九朵蓮花</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Javanese Text', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('site-background.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      display: flex;
+    }
+    a { color: #2a6f2a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Main Content Area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: calc(100% - 220px);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header.main-header {
+      text-align: center;
+      padding: 40px 0;
+      background: url('bamboo-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-family: 'i ichimaru', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      -webkit-text-stroke: 0.001px #ffffff;
+      text-stroke: 1px #000;
+    }
+    header.main-header p { margin: 0; font-style: italic; }
+
+    /* Article Content */
+    .article-full {
+      background: #fff;
+      border-left: 5px solid #2a6f2a;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article-full h2 { margin-top: 0; color: #2a6f2a; }
+    .article-full p { line-height: 1.6; margin-bottom: 1em; }
+    .article-full table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    .article-full th,
+    .article-full td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .article-full th { background-color: #f4f4f4; }
+
+    /* Sidebar */
+    .sidebar { width: 200px; position: fixed; top: 0; right: 0; height: 100vh; overflow: hidden; box-shadow: -2px 0 5px rgba(0,0,0,0.1); }
+    .sidebar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #e8e8e8; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class='content'>
+    <header class='main-header'>
+      <h1>Blog Chuuren</h1>
+      <p>Explorando o mundo do Riichi Mahjong</p>
+    </header>
+
+    <article class='article-full'>
+      <h2>Oshihiki em Iishanten</h2>
+      <p>A transição de iishanten para tenpai é um momento crítico no desenvolvimento de uma mão no Riichi Mahjong. A probabilidade de se completar um iishanten e transicionar para o tenpai é igual a um menos o produto, para cada compra 
+𝑖
+ de 0 até 
+𝑛
+−
+1, da razão entre o número de peças que não completam a mão 
+(
+𝑁
+−
+𝑢
+−
+𝑖
+)
+ e o número total de peças restantes no muro 
+(
+𝑁
+−
+𝑖
+)
+</p>
+      <p>onde <strong>u</strong> é o ukeire da espera, <strong>n</strong> é o número de compras e <strong>N</strong> é o número de peças no muro.</p>
+
+      <h2>Probabilidade de Completar Iishanten</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ukeire</th>
+            <th>1 Compra</th>
+            <th>3 Compras</th>
+            <th>5 Compras</th>
+            <th>7 Compras</th>
+            <th>10 Compras</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>4</td><td>6.7%</td><td>19.2%</td><td>29.7%</td><td>38.7%</td><td> </td></tr>
+          <tr><td>6</td><td>10.0%</td><td>27.8%</td><td>41.4%</td><td>52.6%</td><td>64.9%</td></tr>
+          <tr><td>8</td><td>13.3%</td><td>35.6%</td><td>51.0%</td><td>63.0%</td><td>75.0%</td></tr>
+          <tr><td>10</td><td>16.7%</td><td>42.3%</td><td>58.9%</td><td>70.9%</td><td>82.5%</td></tr>
+          <tr><td>12</td><td>20.0%</td><td>48.1%</td><td>65.3%</td><td>76.9%</td><td>88.1%</td></tr>
+          <tr><td>16</td><td>26.7%</td><td>58.7%</td><td>75.7%</td><td>86.1%</td><td>94.3%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Deal-In Rate por Tipo de Descarte</h2>
+      <p>Considere a seguinte situação: você está em iishanten com ukeire = 8 (dois kanchans, por exemplo), e um oponente declara riichi. Como decidir se devemos atacar ou defender?</p>
+      <table>
+        <thead>
+          <tr><th>Tipo de pedra</th><th>Deal-In</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Musuji 1 ou 9</td><td>6,6%</td></tr>
+          <tr><td>Musuji 2 ou 8</td><td>8,2%</td></tr>
+          <tr><td>Musuji 3 ou 7</td><td>9,6%</td></tr>
+          <tr><td>Musuji 4 ou 6</td><td>14,3%</td></tr>
+          <tr><td>Musuji 5</td><td>14,5%</td></tr>
+          <tr><td>Suji 1 ou 9</td><td>1,5%</td></tr>
+          <tr><td>Suji 2 ou 8</td><td>3,0%</td></tr>
+          <tr><td>Suji 3 ou 7</td><td>4,5%</td></tr>
+          <tr><td>Suji 4 ou 6</td><td>2,2%</td></tr>
+          <tr><td>Suji 5</td><td>2,2%</td></tr>
+          <tr><td>Letras</td><td>3,4%</td></tr>
+        </tbody>
+      </table>
+      <p>Fazendo uma média desses valores, chegamos a uma média de 6,6% de deal-in rate por descarte.</p>
+
+      <h2>Chance de Tenpai vs. Deal-In Cumulativo</h2>
+      <table>
+        <thead>
+          <tr><th>Descartes</th><th>Tenpai Chance</th><th>Deal-In Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>13.3%</td><td>6.6%</td></tr>
+          <tr><td>2</td><td>24.9%</td><td>12.8%</td></tr>
+          <tr><td>3</td><td>35.6%</td><td>18.5%</td></tr>
+          <tr><td>4</td><td>45.2%</td><td>23.9%</td></tr>
+          <tr><td>5</td><td>51.0%</td><td>28.9%</td></tr>
+          <tr><td>6</td><td>56.3%</td><td>33.5%</td></tr>
+          <tr><td>7</td><td>63.0%</td><td>37.8%</td></tr>
+          <tr><td>8</td><td>67.5%</td><td>41.8%</td></tr>
+          <tr><td>9</td><td>71.7%</td><td>45.5%</td></tr>
+          <tr><td>10</td><td>75.0%</td><td>48.9%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Win Rate Após Tenpai</h2>
+      <p>Correção considerando a probabilidade de ganhar após atingir tenpai:</p>
+      <table>
+        <thead>
+          <tr><th>Compras</th><th>Tenpai Chance</th><th>Win Rate</th><th>Deal-In Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>13.3%</td><td>5.05%</td><td>6.6%</td></tr>
+          <tr><td>2</td><td>24.9%</td><td>9.47%</td><td>12.8%</td></tr>
+          <tr><td>3</td><td>35.6%</td><td>13.53%</td><td>18.5%</td></tr>
+          <tr><td>4</td><td>45.2%</td><td>17.18%</td><td>23.9%</td></tr>
+          <tr><td>5</td><td>51.0%</td><td>19.38%</td><td>28.9%</td></tr>
+          <tr><td>6</td><td>56.3%</td><td>21.39%</td><td>33.5%</td></tr>
+          <tr><td>7</td><td>63.0%</td><td>23.94%</td><td>37.8%</td></tr>
+          <tr><td>8</td><td>67.5%</td><td>25.65%</td><td>41.8%</td></tr>
+          <tr><td>9</td><td>71.7%</td><td>27.26%</td><td>45.5%</td></tr>
+          <tr><td>10</td><td>75.0%</td><td>28.50%</td><td>48.9%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Iishanten Perfeito (Ukeire = 18)</h2>
+      <table>
+        <thead>
+          <tr><th>Compras</th><th>Tenpai Chance</th><th>Win Rate</th><th>Deal-In Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>30.0%</td><td>15.90%</td><td>6.6%</td></tr>
+          <tr><td>2</td><td>51.0%</td><td>27.03%</td><td>12.8%</td></tr>
+          <tr><td>3</td><td>66.5%</td><td>35.25%</td><td>18.5%</td></tr>
+          <tr><td>4</td><td>76.9%</td><td>40.76%</td><td>23.9%</td></tr>
+          <tr><td>5</td><td>83.5%</td><td>44.26%</td><td>28.9%</td></tr>
+          <tr><td>6</td><td>88.0%</td><td>46.64%</td><td>33.5%</td></tr>
+          <tr><td>7</td><td>91.0%</td><td>48.23%</td><td>37.8%</td></tr>
+          <tr><td>8</td><td>93.0%</td><td>49.29%</td><td>41.8%</td></tr>
+          <tr><td>9</td><td>94.5%</td><td>50.09%</td><td>45.5%</td></tr>
+          <tr><td>10</td><td>95.5%</td><td>50.62%</td><td>48.9%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Iishanten Completo: Ryanmen + Kanchan (Ukeire = 12)</h2>
+      <table>
+        <thead>
+          <tr><th>Compras</th><th>Tenpai Chance</th><th>Win Rate</th><th>Deal-In Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>20.0%</td><td>10.6%</td><td>6.6%</td></tr>
+          <tr><td>2</td><td>36.0%</td><td>19.1%</td><td>12.8%</td></tr>
+          <tr><td>3</td><td>48.0%</td><td>25.4%</td><td>18.5%</td></tr>
+          <tr><td>4</td><td>57.0%</td><td>30.2%</td><td>23.9%</td></tr>
+          <tr><td>5</td><td>64.0%</td><td>33.9%</td><td>28.9%</td></tr>
+          <tr><td>6</td><td>69.5%</td><td>36.8%</td><td>33.5%</td></tr>
+          <tr><td>7</td><td>74.0%</td><td>39.2%</td><td>37.8%</td></tr>
+          <tr><td>8</td><td>77.5%</td><td>41.1%</td><td>41.8%</td></tr>
+          <tr><td>9</td><td>80.5%</td><td>42.7%</td><td>45.5%</td></tr>
+          <tr><td>10</td><td>82.5%</td><td>43.7%</td><td>48.9%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Análise Probabilística e VE</h2>
+      <p>Podemos aplicar o conceito de Valor Esperado (VE):</p>
+      <p><em>VE = (0.2792 × 5000) − (0.2982 × 5000) = -95 pontos</em></p>
+      <p>Também podemos calcular o limiar de win rate para deal-in constante de 6,6%:</p>
+      <p><em>P<sub>deal-in</sub>(n) = 1 − (1 − 0,066)<sup>n</sup></em></p>
+
+      <h2>VE Médio por Tipo de Iishanten</h2>
+      <table>
+        <thead>
+          <tr><th>Tipo de Espera</th><th>Winrate em Tenpai</th><th>Tenpai Chance</th><th>Win Rate Total</th><th>VE</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ryanmen + Ryanmen</td><td>53.33%</td><td>55.9%</td><td>29.73%</td><td>+572</td></tr>
+          <tr><td>Ryanmen + Kanchan</td><td>53.33%</td><td>43.8%</td><td>23.37%</td><td>+208</td></tr>
+          <tr><td>Ryanmen + Kanchan (baixada)</td><td>38.73%</td><td>43.8%</td><td>16.96%</td><td>-916</td></tr>
+          <tr><td>Ryanmen + Penchan</td><td>53.33%</td><td>43.8%</td><td>23.37%</td><td>+208</td></tr>
+          <tr><td>Ryanmen + Penchan (baixada)</td><td>40.45%</td><td>43.8%</td><td>17.74%</td><td>-883</td></tr>
+          <tr><td>Ryanmen + Shanpon</td><td>53.33%</td><td>43.8%</td><td>23.37%</td><td>+208</td></tr>
+          <tr><td>Ryanmen + Shanpon (baixada)</td><td>43.64%</td><td>43.8%</td><td>19.14%</td><td>-790</td></tr>
+          <tr><td>Ryanmen + Tanki</td><td>53.33%</td><td>40.8%</td><td>21.76%</td><td>+32</td></tr>
+          <tr><td>Ryanmen + Tanki (baixada)</td><td>40.42%</td><td>40.8%</td><td>16.51%</td><td>-1001</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Conclusão</h2>
+      <p>Em média, atacar em iishanten onde a espera em tenpai não é ryanmen gera VE negativo. Devemos defender nessas situações (exceto em cenários onde apenas subir pontuação importa). Por outro lado, em iishanten perfeito (ryanmen + ryanmen), o VE é sempre positivo.</p>
+      <p><strong>Conclusão:</strong> Devemos atacar apenas em iishanten perfeito (ryanmen + ryanmen).</p>
+
+      <a href='index.html'>&larr; Voltar ao blog</a>
+    </article>
+
+    <footer>
+      &copy; 2025 九朵蓮花. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <aside class='sidebar'>
+    <img src='vertical-bamboo.png' alt='Vertical Bamboo Image'>
+  </aside>
+</body>
+</html>
