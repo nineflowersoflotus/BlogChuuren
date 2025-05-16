@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eficiência de Blocos: Yonrenkei | 九朵蓮花</title>
+  <style>
+    /* Fonte Mahjong */
+    @font-face {
+      font-family: 'Mahjong';
+      src: url('fonts/mahjong.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Javanese Text', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('site-background.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      display: flex;
+    }
+    a { color: #2a6f2a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Main Content Area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: calc(100% - 220px);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header.main-header {
+      text-align: center;
+      padding: 40px 0;
+      background: url('bamboo-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-family: 'i ichimaru', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      -webkit-text-stroke: 0.001px #ffffff;
+      text-stroke: 1px #000;
+    }
+    header.main-header p { margin: 0; font-style: italic; }
+
+    /* Article Content */
+    .article-full {
+      background: #fff;
+      border-left: 5px solid #2a6f2a;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article-full h2 { margin-top: 0; color: #2a6f2a; }
+    .article-full h3 { color: #2a6f2a; margin-top: 1.5em; }
+    .article-full p { line-height: 1.6; margin-bottom: 1em; }
+    .article-full table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    .article-full th,
+    .article-full td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .article-full th { background-color: #f4f4f4; }
+
+    /* CSS para caracteres Mahjong gerados */
+    .mahjong-char {
+      font-family: 'Mahjong', monospace;
+      font-size: 2em;
+      vertical-align: middle;
+    }
+
+    /* Sidebar */
+    .sidebar { width: 200px; position: fixed; top: 0; right: 0; height: 100vh; overflow: hidden; box-shadow: -2px 0 5px rgba(0,0,0,0.1); }
+    .sidebar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #e8e8e8; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <header class="main-header">
+      <h1>Blog Chuuren</h1>
+      <p>Explorando o mundo do Riichi Mahjong</p>
+    </header>
+
+    <article class="article-full">
+      <h2>Eficiência de Blocos: Yonrenkei</h2>
+        <p>Yonrenkei se trata de uma estrutura onde temos uma sequência de quatro números como 3p4p5p6p. Descartar uma das pontas resulta em uma sequência formada. A compra de uma das peças que encaixa pelos lados (2p/7p) resulta em um sanmenchan, e a compra de uma das peças do meio (4p/5p) resulta em uma sequência + uma espera ryanmen. Isso faz do yonrenkei a estrutura complexa mais forte dentre as mais comuns. Por exemplo:
+            <br>4m5m6m8m9m4p5p6p7p4s4s6s8s8s<br>
+        Separando o yonrenkei em 2 blocos, temos:
+        <br>4m5m6m + 8m9m + 4p5p + 6p7p + 4s4s + 6s8s8s<br>
+        Temos 6 blocos, sendo o mais fraco deles o penchan 8m9m, logo temos uma opção de descarte clara.<p>
+            <h3>Yonrenkei na Ponta</h3>
+            <p>Quando temos um yonrenkei como 1s2s3s4s, a eficiência de se manter o 4s não é muito diferente de um 4s isolado. A formação de um sanmenchan é impossível, e apenas 3s e 5s formam uma espera ryanmen. A compra de 1s ou 4s nos dá um par (nobetan), o que pode ser útil em mãos sem par.
+            <h3>Múltiplos yonrenkei</h3>
+            <p>Quando temos dois yonrenkei (ex.: 3p4p5p6p + 3s4s5s6s) em uma mão com um grupo já completo, de forma geral é eficiente descartar a ponta de um dos yonrenkei, mantendo um deles e transformando o outro em uma sequência completa. </p>
+            </p>
+        <h3>Upgrades</h3>
+        <p>Uma espera yonrenkei do tipo 3s4s5s6s pode ser melhorada com todas as peças de 1s a 8s, com exceção apenas do 9s. Na metade dos casos, há a formação de uma boa espera (ex.: 2s3s4s5s6s sanmenchan ou 3s4s + 4s5s6s)</p>
+
+      <!-- demais seções e tabelas sobre eficiência de Yonrenkei -->
+
+      <a href="index.html">&larr; Voltar ao blog</a>
+    </article>
+
+    <footer>
+      &copy; 2025 九朵蓮花. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <aside class="sidebar">
+    <img src="vertical-bamboo.png" alt="Vertical Bamboo Image">
+  </aside>
+
+  <script>
+    // Mapeamento QWERTY para fonte Mahjong
+    const tileMap = {
+      m: ['a','s','d','f','g','h','j','k','l'],
+      p: ['q','w','e','r','t','y','u','i','o'],
+      s: ['z','x','c','v','b','n','m',',','.'],
+      z: ['1','2','3','4','5','6','7']
+    };
+
+    function convertMahjongTiles(html) {
+      return html.replace(/([1-9])([mpsz])/g, (_, digit, suit) => {
+        const index = parseInt(digit, 10) - 1;
+        const key = tileMap[suit][index] || '';
+        return `<span class="mahjong-char">${key}</span>`;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const article = document.querySelector('.article-full');
+      if (article) {
+        article.innerHTML = convertMahjongTiles(article.innerHTML);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eficiência de Blocos: Ryankan | 九朵蓮花</title>
+  <style>
+    /* Fonte Mahjong */
+    @font-face {
+      font-family: 'Mahjong';
+      src: url('fonts/mahjong.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Javanese Text', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('site-background.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      display: flex;
+    }
+    a { color: #2a6f2a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Main Content Area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: calc(100% - 220px);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header.main-header {
+      text-align: center;
+      padding: 40px 0;
+      background: url('bamboo-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-family: 'i ichimaru', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      -webkit-text-stroke: 0.001px #ffffff;
+      text-stroke: 1px #000;
+    }
+    header.main-header p { margin: 0; font-style: italic; }
+
+    /* Article Content */
+    .article-full {
+      background: #fff;
+      border-left: 5px solid #2a6f2a;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article-full h2 { margin-top: 0; color: #2a6f2a; }
+    .article-full h3 { color: #2a6f2a; margin-top: 1.5em; }
+    .article-full p { line-height: 1.6; margin-bottom: 1em; }
+    .article-full table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    .article-full th,
+    .article-full td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .article-full th { background-color: #f4f4f4; }
+
+    /* CSS para caracteres Mahjong gerados */
+    .mahjong-char {
+      font-family: 'Mahjong', monospace;
+      font-size: 2em;
+      vertical-align: middle;
+    }
+
+    /* Sidebar */
+    .sidebar { width: 200px; position: fixed; top: 0; right: 0; height: 100vh; overflow: hidden; box-shadow: -2px 0 5px rgba(0,0,0,0.1); }
+    .sidebar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #e8e8e8; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <header class="main-header">
+      <h1>Blog Chuuren</h1>
+      <p>Explorando o mundo do Riichi Mahjong</p>
+    </header>
+
+    <article class="article-full">
+      <h2>Eficiência de Blocos: Ryankan</h2>
+        <p>Ryankan se trata de uma estrutura onde temos dois kanchan grudados compartilhando a mesma peça (ex.: 4p6p8p). Seu ukeire é o mesmo de uma espera ryanmen (8), com o detalhe que, se tivermos um iishanten com duas esperas, uma delas ryankan, se completarmos a outra espera sempre teremos uma espera kanchan em tenpai. A vantagem disso é a construção de uma armadilha de suji (ex.: 1m3m5m -> 1m3m, 2m parece seguro pelo descarte de 5m).
+            <h3>Fragmentos de Ryankan</h3>
+            <p>Quando temos uma forma de duas peças como 1p5p, chamamos isso de um fragmento de ryankan, pois a compra de um 3p forma um ryankan. Conhecer essa forma é útil em decisões como escolher entre descartar 1s6s ou 1p5p, mas no longo prazo acabarão sendo descartadas de qualquer forma caso não sejam formadas rapidamente.</p>
+      <!-- demais seções e tabelas sobre eficiência de Yonrenkei -->
+
+      <a href="index.html">&larr; Voltar ao blog</a>
+    </article>
+
+    <footer>
+      &copy; 2025 九朵蓮花. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <aside class="sidebar">
+    <img src="vertical-bamboo.png" alt="Vertical Bamboo Image">
+  </aside>
+
+  <script>
+    // Mapeamento QWERTY para fonte Mahjong
+    const tileMap = {
+      m: ['a','s','d','f','g','h','j','k','l'],
+      p: ['q','w','e','r','t','y','u','i','o'],
+      s: ['z','x','c','v','b','n','m',',','.'],
+      z: ['1','2','3','4','5','6','7']
+    };
+
+    function convertMahjongTiles(html) {
+      return html.replace(/([1-9])([mpsz])/g, (_, digit, suit) => {
+        const index = parseInt(digit, 10) - 1;
+        const key = tileMap[suit][index] || '';
+        return `<span class="mahjong-char">${key}</span>`;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const article = document.querySelector('.article-full');
+      if (article) {
+        article.innerHTML = convertMahjongTiles(article.innerHTML);
+      }
+    });
+  </script>
+</body>
+</html>
