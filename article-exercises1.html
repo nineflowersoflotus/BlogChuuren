@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15 Exercícios de Eficiência #1 | 九朵蓮花</title>
+  <style>
+    /* Fonte Mahjong */
+    @font-face {
+      font-family: 'Mahjong';
+      src: url('./mahjong.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Javanese Text', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('site-background.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      display: flex;
+    }
+    a { color: #2a6f2a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Main Content Area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: calc(100% - 220px);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header.main-header {
+      text-align: center;
+      padding: 40px 0;
+      background: url('bamboo-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-family: 'i ichimaru', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      -webkit-text-stroke: 0.001px #ffffff;
+      text-stroke: 1px #000;
+    }
+    header.main-header p { margin: 0; font-style: italic; }
+
+    /* Article Content */
+    .article-full {
+      background: #fff;
+      border-left: 5px solid #2a6f2a;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article-full h2 { margin-top: 0; color: #2a6f2a; }
+    .article-full h3 { color: #2a6f2a; margin-top: 1.5em; }
+    .article-full p { line-height: 1.6; margin-bottom: 1em; }
+    .article-full table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    .article-full th,
+    .article-full td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .article-full th { background-color: #f4f4f4; }
+
+    /* CSS para caracteres Mahjong gerados */
+    .mahjong-char {
+      font-family: 'Mahjong', monospace;
+      font-size: 2em;
+      vertical-align: middle;
+    }
+
+    /* Sidebar */
+    .sidebar { width: 200px; position: fixed; top: 0; right: 0; height: 100vh; overflow: hidden; box-shadow: -2px 0 5px rgba(0,0,0,0.1); }
+    .sidebar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #e8e8e8; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <header class="main-header">
+      <h1>Blog Chuuren</h1>
+      <p>Explorando o mundo do Riichi Mahjong</p>
+    </header>
+
+    <article class="article-full">
+        <h2>15 Exercícios de Eficiência #1</h2>
+        <h3>Exercícios 1-15</h3>
+        <p>1. 2m2m7m8m9m2p7p8p8p4s5s5s6s 3p<br></p>
+        <p>2. 1m2m3m4m6m6m7m7m1p2p4s6s6s 5s<br></p>
+        <p>3. 3m4m5m7m4p4p6p7p3s4s5s9s9s 8m<br></p>
+        <p>4. 5m6m6m1p1p4p4p5p6p7p6s7s8s 3p<br></p>
+        <p>5. 3m4m5m7m4p4p6p7p3s4s5s9s9s 7m<br></p>
+        <p>6. 2p2p3p8p9p2s3s5s5s6s6s7s7s 3p<br></p>
+        <p>7. 2m2m3m4m7m8m8p9p1s2s3s8s9s 7m<br></p>
+        <p>8. 3m4m7m7m8m3p3p4p1s2s3s4s4s 1s<br></p>
+        <p>9. 1m2m3m5m6m2p3p4s6s7s8s8s9s 5s<br></p>
+        <p>10. 1m2m3m2p3p4p5p5p5s6s8s8s9s 1p<br></p>
+        <p>11. 1m2m2m5m5m6m3p3p2s3s4s5s7s 6s<br></p>
+        <p>12. 5m6m6m2p3p5p5p7p8p5s6s8s9s 8s<br></p>
+        <p>13. 4m4m6m6m7m7m8m9m1p2p3p5p7p 9m<br></p>
+        <p>14. 1m2m3m6m6m8m1p5p5p8p4s5s6s 4m<br></p>
+        <p>15. 1m2m3m4m5m2p3p3p4p7p5s6s6s 5s<br></p>
+
+        <h3>Resoluções</h3>
+        <p>1. Primeiramente, vamos dividir a mão em blocos:<br>2m2m 7m8m9m 2p3p 7p8p8p 4s5s 5s6s<br>Temos 6 blocos, portanto devemos eliminar um. A melhor escolha é descartar 5s, decompondo o nakabukure em uma sequência.
+        <br><br>2. Temos algumas formas diferentes de dividir essa mão em blocos:<br>1m2m3m 4m6m 6m7m7m 1p2p 4s5s6s6s<br>1m2m3m4m 6m6m7m7m 1p2p 4s5s6s6s<br>
+    1m2m3m 4m 6m6m7m7m 1p2p 4s5s 6s6s<br>Para essa mão, temos que pensar em múltiplos passos ao invés de um. Com a primeira divisão, 6s é um bom primeiro descarte, pois desfazemos o aryanmen, mas e depois? Precisamos de um par, e o par disponível é 7m7m, que desfaz uma espera ryanmen e nos deixa com um kanchan e um penchan.<br>
+Para a segunda divisão, a ideia é a mesma, descarte do aryanmen, mas nesse caso ficamos em espera nobetan 1m4m ou completamos uma trinca em 6m6m7m7m para formar um par.<br>
+A terceira divisão é a exceção da regra do descarte do aryanmen. Temos um ryanmen defasado 5s6s (ukeire = 6, pouco melhor que um kanchan/penchan), um bom duplo ryanmen 6m6m7m7m e um penchan 1p2p.<br>
+No primeiro caso o descarte seria 6s → 6m. No segundo, seria 6s → 1p2p. No terceiro, seria 4m → 1p2p. O primeiro e segundo tem potencal de pinfu iipeikou, apesar da possibilidade de se completar a trinca. Vamos calcular o ukeire dos 3 casos:<br>
+1. Ukeire = 4 + 4 = 8.<br>2. Ukeire = 4 + 14 = 18.<br>3. Ukeire = 14 + 6 = 20.<br>Percebe que na opção 1 ficamos em iishanten imediatamente, mas com uma espera kanchan ou penchan em tenpai, enquanto nos outros dois ficamos com duas esperas ryanmen, com potencial de pinfu iipeikou. Logo, 4m → 1p2p é a melhor sequência de descartes (caso compre-se o 3p, descartamos 6s e ficamos em shanpon).
+<br><br>3. 3m4m5m 7m8m 4p4p 6p7p 3s4s5s 9s9s<br>Temos duas sequências completas, dois pares e dois ryanmen, totalizando 6 blocos. Devemos então descartar o par sobrando, 9s9s, possibilitando tanyao.
+<br><br>4. 5m6m6m 1p1p 3p4p4p 5p6p7p 6s7s8s<br>Nesse caso, temos que escolher entre cortar um dos dois pares ryanmen, 5m6m6m ou 3p4p4p. Podemos cortar 4p de 3p4p4p, pois é o par com menor número de upgrades.
+<br><br>5. 3m4m5m 7m7m 4p4p 6p7p 3s4s5s 9s9s<br>Um caso clássico onde acabamos com 3 pares na mão. Devemos descartar 9s9s para manter tanyao e possibilidade de sanshoku com 4p.
+<br><br>6. 2p2p3p3p 8p9p 2s3s 5s5s6s6s7s7s<br>Iishanten de chiitoitsu, descarte 8p9p2s3s.
+<br><br>7. 2m2m3m4m 7m7m8m 8p9p 1s2s3s 8s9s<br>Caso básico de descarte de aryanmen. Descartando 2m, abre espaço para sanshoku 789 e talvez até junchan com a compra de 1m.
+<br><br>8. 3m4m 7m7m8m 3p3p4p 1s1s 2s3s4s4s<br>Mais um caso de descarte de aryanmen, temos um bloco completo e 3 esperas boas, logo descartamos 4s.
+<br><br>9. 1m2m3m 1p2p3p4p 5p5p 5s6s 8s8s9s<br>Temos um yonrenkei de ponta 1p2p3p4p, uma espera fraca, logo devemos cortar 1p ou 4p e manter o par kanchan 8s9s9s com ukeire de 6.
+<br><br>10. 1m2m3m 1p2p3p 4p5p5p 5s6s 8s8s9s<br>Como não temos um par, devemos descartar 9s, por ser um par penchan mais fraco que o par ryanmen 4p5p5p.</p>
+        
+
+
+      <a href="index.html">&larr; Voltar ao blog</a>
+    </article>
+
+    <footer>
+      &copy; 2025 九朵蓮花. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <aside class="sidebar">
+    <img src="vertical-bamboo.png" alt="Vertical Bamboo Image">
+  </aside>
+
+  <script>
+    // Mapeamento QWERTY para fonte Mahjong
+    const tileMap = {
+      m: ['a','s','d','f','g','h','j','k','l'],
+      p: ['q','w','e','r','t','y','u','i','o'],
+      s: ['z','x','c','v','b','n','m',',','.'],
+      z: ['1','2','3','4','5','6','7']
+    };
+
+    function convertMahjongTiles(html) {
+      return html.replace(/([1-9])([mpsz])/g, (_, digit, suit) => {
+        const index = parseInt(digit, 10) - 1;
+        const key = tileMap[suit][index] || '';
+        return `<span class="mahjong-char">${key}</span>`;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const article = document.querySelector('.article-full');
+      if (article) {
+        article.innerHTML = convertMahjongTiles(article.innerHTML);
+      }
+    });
+  </script>
+</body>
+</html>
